@@ -1,0 +1,48 @@
+{
+  "title": "Cover RF Sync",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Cover RF Sync Configuration",
+        "description": "Set the optional script, open/close durations, percentage tolerance and sensors.\n{tol_hint}",
+        "data": {
+          "script_entity_id": "Configured script (optional)",
+          "name": "Name",
+          "open_duration": "Open duration (seconds)",
+          "close_duration": "Close duration (seconds)",
+          "tolerance_percent": "Tolerance at endpoints (%)",
+          "open_sensor": "Opening start sensor (optional)",
+          "close_sensor": "Closing start sensor (optional)"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cover RF Sync Options",
+        "description": "{tol_hint}",
+        "data": {
+          "script_entity_id": "Configured script",
+          "open_duration": "Open duration (seconds)",
+          "close_duration": "Close duration (seconds)",
+          "tolerance_percent": "Tolerance at endpoints (%)",
+          "open_sensor": "Open sensor",
+          "close_sensor": "Close sensor"
+        }
+      }
+    }
+  },
+  "services": {
+    "activate_script": {
+      "name": "Activate configured script",
+      "description": "Calls the configured script for the cover and waits for the sensor (if present) to start moving.",
+      "fields": {
+        "entity_id": {
+          "name": "Cover",
+          "description": "Cover entity_id (e.g., cover.gate)"
+        }
+      }
+    }
+  }
+}

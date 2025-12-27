@@ -1,0 +1,48 @@
+{
+  "title": "Cover RF Sync",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configuração do Cover RF Sync",
+        "description": "Defina o script (opcional), tempos de abertura/fecho, tolerância em percentagem e sensores.\n{tol_hint}",
+        "data": {
+          "script_entity_id": "Script configurado (opcional)",
+          "name": "Nome",
+          "open_duration": "Tempo de abertura (segundos)",
+          "close_duration": "Tempo de fecho (segundos)",
+          "tolerance_percent": "Tolerância nos extremos (%)",
+          "open_sensor": "Sensor de início de abertura (opcional)",
+          "close_sensor": "Sensor de início de fecho (opcional)"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opções do Cover RF Sync",
+        "description": "{tol_hint}",
+        "data": {
+          "script_entity_id": "Script configurado",
+          "open_duration": "Tempo de abertura (segundos)",
+          "close_duration": "Tempo de fecho (segundos)",
+          "tolerance_percent": "Tolerância nos extremos (%)",
+          "open_sensor": "Sensor de abertura",
+          "close_sensor": "Sensor de fecho"
+        }
+      }
+    }
+  },
+  "services": {
+    "activate_script": {
+      "name": "Ativar script configurado",
+      "description": "Chama o script configurado para a cover indicada e aguarda o sensor (se existir) para iniciar movimento.",
+      "fields": {
+        "entity_id": {
+          "name": "Cover",
+          "description": "Entity ID da cover (ex.: cover.portao)"
+        }
+      }
+    }
+  }
+}
