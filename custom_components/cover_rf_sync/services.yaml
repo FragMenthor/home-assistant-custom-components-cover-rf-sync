@@ -1,0 +1,12 @@
+
+activate_script:
+  name: "Ativar script configurado"
+  description: "Chama o script configurado para a cover indicada e, se aplicável, aguarda o sensor para iniciar o movimento."
+  fields:
+    entity_id:
+      name: "Cover"
+      description: "Entity ID da cover (ex.: cover.portao)"
+      required: true
+      selector:
+        entity:
+          domain: cover

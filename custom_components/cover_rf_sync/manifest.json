@@ -1,0 +1,18 @@
+{
+  "domain": "cover_rf_sync",
+  "name": "Cover RF Sync",
+  "version": "0.9.0",
+  "documentation": "https://github.com/FragMenthor/home-assistant-custom-components-cover-rf-sync",
+  "issue_tracker": "https://github.com/FragMenthor/home-assistant-custom-components-cover-rf-sync/issues",
+  "codeowners": [
+    "@FragMenthor"
+  ],
+  "config_flow": true,
+  "integration_type": "helper",
+  "iot_class": "calculated",
+  "requirements": [],
+  "dependencies": [],
+  "loggers": [
+    "custom_components.cover_rf_sync"
+  ]
+}
